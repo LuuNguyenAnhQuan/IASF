@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Employee</title>
+</head>
+<body>
+<h2>Add Employee</h2>
+
+<!-- Hiển thị thông báo lỗi nếu có -->
+<div :if="${errorMessage}" class="alert alert-danger">
+    <span :text="${errorMessage}"></span>
+</div>
+
+<form action="/employees/add" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required><br><br>
+
+    <label for="salary">Salary:</label>
+    <input type="number" id="salary" name="salary" required><br><br>
+
+    <button type="submit">Add Employee</button>
+</form>
+</body>
+</html>
